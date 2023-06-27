@@ -1,0 +1,36 @@
+.banner{
+    background-image: url("../img/Hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: end;
+    height: 65vh;
+}
+
+.banner__portada{
+    height: 45%;
+    color:#ffffff;
+}
+
+.banner__portada-promo{
+    font-size: 3.2rem;
+    padding-bottom: 1rem;
+}
+
+.banner__portada-porcentaje{
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.banner__portada-boton {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #2A7AE4;
+    color: #ffffff;
+    border:none;
+}
+
+.banner__portada-boton:hover{
+    border:1px solid #ffffff
+}

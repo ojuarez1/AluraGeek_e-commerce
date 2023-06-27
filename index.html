@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraGeek</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
 </head>
 <body>
     <header>
         <div class="principal container">
             <div class="principal__logo">
-                <img src="assets/img/Logo.png" alt="Logo AluraGeek">
-                <input type="text" placeholder="¿Que deceas buscar?">
+                <img class="principal__logo-img"src="assets/img/Logo.png" alt="Logo AluraGeek">
+                <div class="principal__logo-search">
+                    <input class="principal__logo-search--input" type="text" placeholder="¿Que deceas buscar?">
+                    <img class="principal__logo-search--search" src="assets/img/search.svg" alt="">
+                </div>
             </div>
-            <a href="iniciarSecion.html" target="_blank"><button type="submit">Login</button></a>
+            <a href="iniciarSecion.html" target="_blank"><button class="principal__logo-boton" type="submit">Login</button></a>
         </div>
     </header>
     <main>
         <section class="banner">
-            <div class="banner__titulo container">
-                <h1>Febrero Promocional</h1>
-                <p>Productos selecionados con 33% de descuentos</p>
-                <button type="submit">Ver Consolas</button>
+            <div class="banner__portada container">
+                <h1 class="banner__portada-promo">Febrero Promocional</h1>
+                <p class="banner__portada-porcentaje">Productos selecionados con 33% de descuentos</p>
+                <button class="banner__portada-boton" type="submit">Ver Consolas</button>
             </div>
         </section>
         <section class="container">
@@ -231,7 +235,7 @@
                 </form>
             </div>
         </section>
-        <section>
+        <section class="container">
             <p>&copy Oscar Juarez-2023</p>
         </section>
     </footer>
