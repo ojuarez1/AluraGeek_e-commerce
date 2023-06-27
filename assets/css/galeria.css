@@ -1,0 +1,42 @@
+.galeria__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0 1rem 0;
+}
+
+.galeria__header-titulos{
+    color:#464646;
+}
+
+.galeria__header-arrow a, .galeria__articulos-flex--link{
+    text-decoration: none;
+    color: #106ee9;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.galeria__header-arrow img{
+    width: 0.65rem;
+    vertical-align: middle;
+}
+
+.galeria__articulos-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.galeria__articulos-flex li{
+    list-style: none;
+    display: block;
+    width: calc(13.2vw - 0.8vw);
+}
+
+.galeria__articulos-flex img{
+    width: 100%;
+}
+
+.galeria__articulos-flex--precio{
+    font-size: 0.75rem;
+    padding: 0.25rem 0;    
+}
