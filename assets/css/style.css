@@ -7,7 +7,18 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+main{
+    background-color: #f5f5f5;
+    padding-bottom: 2rem;
+}
+
 .container{
    width: 80vw;
    margin: 0 auto;
+}
+
+@media (max-width:768px){
+    .container {
+        width: 90vw;
+    }
 }

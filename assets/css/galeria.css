@@ -40,3 +40,20 @@
     font-size: 0.75rem;
     padding: 0.25rem 0;    
 }
+
+@media (max-width:768px) {
+    .galeria__articulos-flex>li:nth-child(5), .galeria__articulos-flex>li:nth-child(6){
+        display: none;
+    }
+
+    .galeria__articulos-flex li {
+        width: calc(25vw - 4vw);
+    }
+}
+
+@media (max-width:468px){
+    .galeria__articulos-flex li {
+        width: calc(50vw - 7vw);
+        padding-bottom: 0.75rem;
+    }
+}
