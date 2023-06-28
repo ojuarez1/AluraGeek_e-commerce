@@ -12,7 +12,7 @@ main{
     padding-bottom: 2rem;
 }
 
-.container{
+.container, .inicioSecion{
    width: 80vw;
    margin: 0 auto;
 }
