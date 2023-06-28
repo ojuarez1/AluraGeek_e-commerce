@@ -1,0 +1,58 @@
+.formulario__fieldset{
+    box-shadow: 0 3px 5px #00000010;
+    text-align: start;
+}
+
+.inicioSecion__form{
+    width: 30vw;
+}
+
+.principal__logo-boton{
+    width: 12vw;
+}
+
+.inicioSecion h4{
+    text-align: start;
+    width: 30vw;
+    margin: 0 auto 1rem;
+    font-size: 1.3rem;
+}
+
+@media(max-width:768px){
+    .principal__logo-boton {
+        width: 20vw;
+    }
+
+    .inicioSecion__form, .inicioSecion h4{
+        width: 55vw;
+    }
+
+    .inicioSecion__form button{
+        margin-top: 1rem;
+        width: 20vw;
+    }
+}
+
+@media(max-width:468px){
+    .principal__logo-boton {
+        width: 40vw;
+    }
+
+    .inicioSecion{
+        padding: 1rem 0 0 0;
+        width: 100vw;
+    }
+
+    .inicioSecion__form,
+    .inicioSecion h4 {
+        width: 90vw;
+    }
+
+    .formulario__fieldset-item::placeholder{
+       font-size: 0.60rem;
+    }
+
+    .inicioSecion__form button {
+        width: 90vw;
+    }
+}
