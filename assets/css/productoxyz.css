@@ -64,4 +64,8 @@
     .productoXYZ__info>p:first-child {
         font-size: 1.2rem;
     }
+
+    .productoXYZ__info{
+        padding-left: 1.5rem;
+    }
 }
