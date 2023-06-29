@@ -3,52 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Producto</title>
+    <title>Iniciar Secion</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/inicioSecion.css">
-    <link rel="stylesheet" href="assets/css/agregarProducto.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/inicioSecion.css">
 </head>
 <body>
     <header>
         <div class="principal container">
-            <img class="principal__logo-img"src="assets/img/Logo.png" alt="Logo AluraGeek">
+            <img class="principal__logo-img"src="/assets/img/Logo.png" alt="Logo AluraGeek">
             <div class="principal__search">
                 <div class="principal__search-search">
                     <input class="principal__search-search--input" type="text" placeholder="¿Que deceas buscar?">
-                    <img class="principal__search-search--search" src="assets/img/search.svg" alt="">
+                    <img class="principal__search-search--search" src="/assets/img/search.svg" alt="">
                 </div>
             </div>
-            <a href="index.html" target="_self"><button class="principal__logo-boton" type="submit">Menu administrador</button></a>
         </div>
     </header>
     <main>
         <div class="inicioSecion">
-            <h4>Agregar nuevo producto</h4>
+            <h4>Inciar Secion</h4>
             <form action="" class="inicioSecion__form">
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="url">URL de imagen</label>
-                    <input class="formulario__fieldset-item" type="url" name="url" placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAA.png" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="categoria">Categoria</label>
-                    <input class="formulario__fieldset-item" type="text" name="categoria" placeholder="Consolas" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="nombre">Nombre del producto</label>
-                    <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Producto XYZ" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="precio">Precio del producto</label>
-                    <input class="formulario__fieldset-item" type="text" name="precio" placeholder="$ 60" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="descripcion">Descripcion del producto</label>
-                    <input class="formulario__fieldset-item" type="text" name="decripcion" autocomplete="off">
-                </fieldset>
-                <a href=""><button class="inicioSecion__form-input" type="submit">Agregar producto</button></a>
+                <input class="inicioSecion__form-input" type="email" placeholder="Escriba su correo electronico">
+                <input class="inicioSecion__form-input" type="password" placeholder="Escriba su contraseña">
+                <a href=""><button class="inicioSecion__form-input" type="submit">Entrar</button></a>
             </form>
         </div>
     </main>
@@ -57,7 +37,7 @@
             <article class="container hableConNosotros">
                 <div class="hableConNosotros__lista">
                     <div class="hableConNosotros__lista-img">
-                        <img src="assets/img/Logo.png" alt="Logo AluraGeek">
+                        <img src="/assets/img/Logo.png" alt="Logo AluraGeek">
                     </div>
                     <ul class="hableConNosotros__lista-flex">
                         <li class="hableConNosotros__lista-items">Quienes somos</li>
