@@ -29,7 +29,7 @@
             <div class="banner__portada container">
                 <h1 class="banner__portada-promo">Febrero Promocional</h1>
                 <p class="banner__portada-porcentaje">Productos selecionados con 33% de descuentos</p>
-                <button class="banner__portada-boton" type="submit">Ver Consolas</button>
+                <a href="#consolas"><button class="banner__portada-boton" type="submit">Ver Consolas</button></a>
             </div>
         </section>
         <section class="container galeria">
@@ -92,7 +92,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="consolas">
+            <article class="consolas" id="consolas">
                 <div class="galeria__header">
                     <h2 class="galeria__header-titulos">Consolas</h2>
                     <div class="galeria__header-arrow">
@@ -233,7 +233,8 @@
                     <form action="#">
                         <fieldset class="formulario__fieldset">
                             <label class="formulario__fieldset-item" for="nombre">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Oscar Juarez" autocomplete="off">
+                            <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Oscar Juarez" autocomplete="off" data-form-name>
+                            <span class="formulario__fieldset-span" id="span">Este campo no debe estar vacio</span>
                         </fieldset>
                         <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje"></textarea>
                         <button class="formulario__boton" type="submit">Enviar mensaje</button>
@@ -245,5 +246,6 @@
             <p>&copy Oscar Juarez-2023</p>
         </section>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

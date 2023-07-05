@@ -40,6 +40,7 @@
     background-color: #ffffff;
     color:#2A7AE4;
     border: 1px solid #2A7AE4;
+    transition: all 0.3s ease-in-out;
 }
 
 .principal__logo-boton:hover{

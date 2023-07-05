@@ -58,6 +58,7 @@
     border: none;
     margin-top: 1rem;
     border: 1px solid #2A7AE4;
+    transition: all 0.3s ease-in-out;
 }
 
 .formulario__boton:hover {
@@ -70,6 +71,12 @@
     padding: 2rem 0;
     text-align: center;
     font-size: 0.75rem;
+}
+
+.formulario__fieldset-span{
+    display: none;
+    font-size: 0.75rem;
+    color: #d60d0d;
 }
 
 @media (max-width:768px) {
