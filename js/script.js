@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll("#inputext");
+const form = document.querySelector("[data-form]");
 
 inputs.forEach(input => {
     input.addEventListener("blur", (input) => {
@@ -48,4 +49,4 @@ function crearMensajeError(input) {
         mensaje = "Este campo no debe estar vacio"
     }
     input.setCustomValidity(mensaje);
-}
+    }

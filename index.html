@@ -230,14 +230,14 @@
                 </div>
                 <div class="hableConNosotros__formulario">
                     <h5>Hable con nosotros</h5>
-                    <form action="#">
+                    <form action="#" data-form>
                         <div class="formulario__fieldset">
                             <label class="formulario__fieldset-item" for="name">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" placeholder="Oscar Juarez" autocomplete="off" required data-tipo = "nombre" maxlength="40" minlength="6" id="inputext">
+                            <input class="formulario__fieldset-item" type="text" placeholder="Oscar Juarez" autocomplete="off" required data-tipo = "nombre" maxlength="40" minlength="6" id="inputext" name="name">
                             <!--<span class="formulario__fieldset-span" id="span">Este campo no debe estar vacio</span>-->
                         </div>
-                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje" required data-tipo = "mensaje" id="inputext"></textarea>
-                        <button class="formulario__boton" type="submit">Enviar mensaje</button>
+                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje" required data-tipo = "mensaje" id="inputext" name="mensaje"></textarea>
+                        <button class="formulario__boton" type="submit" data-form-btn>Enviar mensaje</button>
                     </form>
                 </div>
             </article>
