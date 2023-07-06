@@ -25,10 +25,16 @@
     <main>
         <div class="inicioSecion">
             <h4>Inciar Secion</h4>
-            <form action="" class="inicioSecion__form">
-                <input class="inicioSecion__form-input" type="email" placeholder="Escriba su correo electronico">
-                <input class="inicioSecion__form-input" type="password" placeholder="Escriba su contraseña">
-                <a href=""><button class="inicioSecion__form-input" type="submit">Entrar</button></a>
+            <form action="#" class="inicioSecion__form">
+                <div class="contenedor" data-cont>
+                    <input class="inicioSecion__form-input" type="email" placeholder="Escriba su correo electronico" required data-tipo ="email" id="email" data-inicio>
+                    <span class="form__span" data-span></span>
+                </div>
+                <div class="contenedor" data-cont>
+                    <input class="inicioSecion__form-input" type="password" placeholder="Escriba su contraseña" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" title="Al menos 8 caracteres, máximo 15, debe contener una letra minúscula, una letra mayúscula y no puede contener caracteres especiales." data-tipo="password" required data-inicio>
+                    <span class="form__span" data-span></span>
+                </div>
+                <button class="inicioSecion__form-input">Entrar</a></button>
             </form>
         </div>
     </main>
@@ -50,13 +56,13 @@
                 </div>
                 <div class="hableConNosotros__formulario">
                     <h5>Hable con nosotros</h5>
-                    <form action="#">
-                        <fieldset class="formulario__fieldset">
-                            <label class="formulario__fieldset-item" for="nombre">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Oscar Juarez" autocomplete="off">
-                        </fieldset>
-                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje"></textarea>
-                        <button class="formulario__boton" type="submit">Enviar mensaje</button>
+                    <form action="#" data-form>
+                        <div class="formulario__fieldset">
+                            <label class="formulario__fieldset-item" for="name">Nombre</label>
+                            <input class="formulario__fieldset-item" type="text" placeholder="Oscar Juarez" autocomplete="off" required data-tipo = "nombre" maxlength="40" minlength="6" id="inputext" name="name" data-rodapie>
+                        </div>
+                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje" required data-tipo = "mensaje" id="inputext2" name="mensaje" data-rodapie></textarea>
+                        <button class="formulario__boton" type="submit" data-form-btn>Enviar mensaje</button>
                     </form>
                 </div>
             </article>
@@ -65,5 +71,7 @@
             <p>&copy Oscar Juarez-2023</p>
         </section>
     </footer>
+    <script src="../js/inicioSecion.js"></script>
+    <!--<script src="js/script.js"></script>-->
 </body>
 </html>

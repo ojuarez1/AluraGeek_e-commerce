@@ -1,9 +1,10 @@
-const inputs = document.querySelectorAll("#inputext");
+const inputs = document.querySelectorAll("[data-rodapie]");
 const form = document.querySelector("[data-form]");
 
 inputs.forEach(input => {
     input.addEventListener("blur", (input) => {
         validar(input.target);
+        console.log(input)
 
     })
 })
@@ -14,26 +15,6 @@ function validar(input) {
     if (validadores[tipoInput]) {
         validadores[tipoInput](input);
     }
-
-    /*const tipoError = ["valueMissing", "customError"];
-    
-    const data = {
-        nombre: {
-            valueMissing: "Debe llenar el campo Nombre",
-            customError:"El campo 'Nombre' no debe contener mas de 40 caractéres",
-        },
-
-        mensaje: {
-            valueMissing: "Debe llenar el campo Mensaje",
-            customError:"El campo 'Mensaje' no debe contener mas de 120 caractéres"
-        }
-    }
-    tipoError.forEach(error => {
-       if (input.validity[error]) {
-            console.log(data[tipoInput][error])
-        } 
-    })*/
-    
 }
 
 const validadores = {
@@ -49,4 +30,4 @@ function crearMensajeError(input) {
         mensaje = "Este campo no debe estar vacio"
     }
     input.setCustomValidity(mensaje);
-    }
+}

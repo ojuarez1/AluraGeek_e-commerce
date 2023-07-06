@@ -19,10 +19,6 @@
     box-shadow: 0 3px 5px #00000010;
 }
 
-.inicioSecion__form a{
-    text-decoration: none;
-}
-
 .inicioSecion__form button{
     background-color: #2A7AE4;
     color: #ffffff;
@@ -32,6 +28,16 @@
 .inicioSecion__form button:hover {
     background-color:#ffffff;
     color:#2A7AE4;
+}
+
+.formulario .form__span{
+    font-size: 0.75rem;
+    color: #d60d0d;
+    display: block;
+}
+
+.form__span{
+    display: none;
 }
 
 @media(max-width:768px){
