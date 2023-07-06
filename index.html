@@ -231,12 +231,12 @@
                 <div class="hableConNosotros__formulario">
                     <h5>Hable con nosotros</h5>
                     <form action="#">
-                        <fieldset class="formulario__fieldset">
-                            <label class="formulario__fieldset-item" for="nombre">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Oscar Juarez" autocomplete="off" data-form-name>
-                            <span class="formulario__fieldset-span" id="span">Este campo no debe estar vacio</span>
-                        </fieldset>
-                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                        <div class="formulario__fieldset">
+                            <label class="formulario__fieldset-item" for="name">Nombre</label>
+                            <input class="formulario__fieldset-item" type="text" placeholder="Oscar Juarez" autocomplete="off" required data-tipo = "nombre" maxlength="40" minlength="6" id="inputext">
+                            <!--<span class="formulario__fieldset-span" id="span">Este campo no debe estar vacio</span>-->
+                        </div>
+                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje" required data-tipo = "mensaje" id="inputext"></textarea>
                         <button class="formulario__boton" type="submit">Enviar mensaje</button>
                     </form>
                 </div>
