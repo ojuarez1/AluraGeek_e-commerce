@@ -1,50 +1,19 @@
-const inputs = document.querySelectorAll("[data-inicio]");
-const container = document.querySelector("[data-cont]");
+const textbox = document.querySelector(".input");
+const form = document.querySelector(".inicioSecion__form")
 
-inputs.forEach(input => {
-    input.addEventListener("blur", (e) => {
-        validar(e.target)
-        console.log(input)
-    })
-})
 
-function validar(input) {
-    const tipoDeInput = input.dataset.tipo;    
-    if (!input.validity.valid) {
-        input.parentElement.classList.add("formulario");
-        input.parentElement.querySelector(".form__span").textContent = crearMensajeError(tipoDeInput, input);
-                         
-    } else {
-        input.parentElement.classList.remove("formulario");
-        input.parentElement.querySelector(".form__span").textContent = ""
-    }
-}
+    const listaClientes = () => fetch("http://localhost:3000/perfil").then((respuesta) => respuesta.json())
+ 
+    console.log(listaClientes())
+    listaClientes().then((data) => {
+        data.forEach(perfil => {
+            if (perfil.correo == textbox.value) {
+                console.log(textbox.value)
+                alert("No puede ingresar")
+            } else {
+                console.log("Este es el error")
+            }
+        });
+    }).catch((error) => alert("Ocurrió un error"))
 
-const errores = [
-    "valueMissing",
-    "typeMismatch",
-    "patternMismatch"
-]
-
-const tipoErrores = {
-    email: {
-        valueMissing: "El campo E-mail no debe estar vacio",
-        typeMismatch: "Debe contener el signo @ y al menos un punto (.)"
-    },
-
-    password: {
-        valueMissing: "El campo Contraseña no debe estar vacio",
-        patternMismatch: "Al menos 8 caracteres, máximo 15, una letra mayúscula, un numero y no caracteres especiales."
-    }
-}
-
-function crearMensajeError(tipoDeInput, input) {
-    let mensaje = "";
-    errores.forEach(error => {
-        if (input.validity[error]) {
-            mensaje = tipoErrores[tipoDeInput][error]
-        }
-    })
-    return mensaje
-}
 
