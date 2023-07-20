@@ -27,6 +27,10 @@
     box-shadow: 0 3px 5px #00000010;
 }
 
+.inicioSecion__link{
+    text-decoration: none;
+}
+
 .inicioSecion__form button{
     background-color: #2A7AE4;
     color: #ffffff;

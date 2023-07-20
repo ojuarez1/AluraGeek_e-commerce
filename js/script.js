@@ -1,33 +1,63 @@
-const inputs = document.querySelectorAll("[data-rodapie]");
-const form = document.querySelector("[data-form]");
+const inputs = document.querySelectorAll(".input");
+const contenedor = document.querySelector("[data-contenedor]")
 
-inputs.forEach(input => {
-    input.addEventListener("blur", (input) => {
-        validar(input.target);
-        console.log(input)
-
-    })
+inputs.forEach(input =>{
+  input.addEventListener("blur", (evento)=>{
+    validar(evento.target);
+  })
 })
 
-function validar(input) {
-    const tipoInput = input.dataset.tipo;
+const validar = (input) =>{
+  const tipoDeInput = input.dataset.tipo;
+  
+  if (!input.validity.valid){
+    input.parentElement.classList.add("contenedorError");
+    input.parentElement.querySelector(".span").innerHTML = mostrarErrores(tipoDeInput, input);
     console.log(input)
-    if (validadores[tipoInput]) {
-        validadores[tipoInput](input);
-    }
+  }else{
+    input.parentElement.classList.remove("contenedorError");
+    input.parentElement.querySelector(".span").innerHTML = "";
+  }
 }
 
-const validadores = {
-    nombre: (input) => crearMensajeError(input),
-    mensaje:(input) => crearMensajeError(input),
-}
+const mensajeErrores ={
+    nombre:{
+        valueMissing: "El campo Nombre no puede estar vacio",
+        patternMismatch:"El campo Nombre no debe tener mas de 50 caracteres"
+    },
+    /* email:{
+      valueMissing:"El campo Correo no puede estar vacio",
+      typeMismatch:"Debe contener el signo @ y al menos un punto (.)"
+    },
+    asunto:{
+        valueMissing: "El campo Asunto no puede estar vacio",
+        patternMismatch:"El campo Asunto no debe tener mas de 50 caracteres"
+    }, */
 
+    password:{
+        valueMissing: "El campo Contraseña no debe estar vacio",
+        patternMismatch: "Al menos 8 caracteres, máximo 15, una letra mayúscula, un numero y no caracteres especiales."
+    },
 
-function crearMensajeError(input) {
-    const contenido = input.value;
-    let mensaje= ""
-    if (!contenido) {
-        mensaje = "Este campo no debe estar vacio"
+    mensaje: {
+        valueMissing: "El campo Mensaje no puede estar vacio",
+        patternMismatch:"El campo Nombre no debe tener mas de 300 caracteres"
     }
-    input.setCustomValidity(mensaje);
+    
+ }
+
+const listaErrores =[
+  "valueMissing",
+  "typeMismatch",
+  "patternMismatch"
+]
+
+const mostrarErrores = (tipoDeInput, input) => {
+  let mensaje = "";
+  listaErrores.forEach(error => {
+    if(input.validity[error]){
+      mensaje = mensajeErrores[tipoDeInput][error];
+    }
+  })
+  return mensaje
 }

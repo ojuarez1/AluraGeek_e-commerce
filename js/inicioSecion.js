@@ -1,6 +1,5 @@
 const inputs = document.querySelectorAll("[data-inicio]");
 const container = document.querySelector("[data-cont]");
-//const span = document.querySelector("[data-span]");
 
 inputs.forEach(input => {
     input.addEventListener("blur", (e) => {
@@ -14,7 +13,6 @@ function validar(input) {
     if (!input.validity.valid) {
         input.parentElement.classList.add("formulario");
         input.parentElement.querySelector(".form__span").textContent = crearMensajeError(tipoDeInput, input);
-        //console.log(span.innerHTML = crearMensajeError(tipoDeInput, input));
                          
     } else {
         input.parentElement.classList.remove("formulario");
