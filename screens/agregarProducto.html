@@ -28,32 +28,39 @@
         <div class="inicioSecion">
             <h4>Agregar nuevo producto</h4>
             <form action="" class="inicioSecion__form">
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="url">URL de imagen</label>
-                    <input class="formulario__fieldset-item" type="url" name="url" placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAA.png" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="categoria">Categoria</label>
-                    <input class="formulario__fieldset-item" type="text" name="categoria" placeholder="Consolas" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="nombre">Nombre del producto</label>
-                    <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Producto XYZ" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="precio">Precio del producto</label>
-                    <input class="formulario__fieldset-item" type="text" name="precio" placeholder="$ 60" autocomplete="off">
-                </fieldset>
-                <fieldset class="formulario__fieldset">
-                    <label class="formulario__fieldset-item" for="descripcion">Descripcion del producto</label>
-                    <input class="formulario__fieldset-item" type="text" name="decripcion" autocomplete="off">
-                </fieldset>
+                <div class="formulario__container formulario__agregarProducto">
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="url" type="url" required autocomplete="on" data-tipo ="url" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="url">url</label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="categoria" type="text" required autocomplete="on" data-tipo ="categoria" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="categoria">Categoria</label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="nombre" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="nombre">Nombre del producto</label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="precio" type="text" required autocomplete="on" data-tipo ="precio" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="precio">Precio del producto</label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="descripcion" type="text" required autocomplete="on" data-tipo ="descripcion" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="descripcion">Descripcion del producto</label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                </div>
                 <a href=""><button class="inicioSecion__form-input" type="submit">Agregar producto</button></a>
             </form>
         </div>
     </main>
     <footer>
-        <section class="container__footer">
+        <section class="footer">
             <article class="container hableConNosotros">
                 <div class="hableConNosotros__lista">
                     <div class="hableConNosotros__lista-img">
@@ -71,11 +78,19 @@
                 <div class="hableConNosotros__formulario">
                     <h5>Hable con nosotros</h5>
                     <form action="#">
-                        <fieldset class="formulario__fieldset">
-                            <label class="formulario__fieldset-item" for="nombre">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" name="nombre" placeholder="Oscar Juarez" autocomplete="off">
-                        </fieldset>
-                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                        <div class="formulario__container">
+                            <div class="formulario__container-input">
+                                <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                                <label class="formulario__label" for="nombre">Nombre </label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
+                            <div class="formulario__container-input" data-contenedor>
+                                <textarea class="formulario__textarea input" cols="30" rows="4" data-tipo = "mensaje" required pattern="^[\s\S]{0,300}$"></textarea>
+                                <span class="barra"></span>
+                                <label class="formulario__label" for="mensaje">Mensaje</label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
+                        </div>
                         <button class="formulario__boton" type="submit">Enviar mensaje</button>
                     </form>
                 </div>

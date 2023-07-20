@@ -213,7 +213,7 @@
         </section>
     </main>
     <footer>
-        <section class="container__footer">
+        <section class="footer">
             <article class="container hableConNosotros">
                 <div class="hableConNosotros__lista">
                     <div class="hableConNosotros__lista-img">
@@ -231,11 +231,19 @@
                 <div class="hableConNosotros__formulario">
                     <h5>Hable con nosotros</h5>
                     <form action="#" data-form>
-                        <div class="formulario__fieldset">
-                            <label class="formulario__fieldset-item" for="name">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" placeholder="Oscar Juarez" autocomplete="off" required data-tipo = "nombre" maxlength="40" minlength="6" id="inputext" name="name" data-rodapie>
+                        <div class="formulario__container">
+                            <div class="formulario__container-input">
+                                <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                                <label class="formulario__label" for="nombre">Nombre </label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
+                            <div class="formulario__container-input" data-contenedor>
+                                <textarea class="formulario__textarea input" cols="30" rows="4" data-tipo = "mensaje" required pattern="^[\s\S]{0,300}$"></textarea>
+                                <span class="barra"></span>
+                                <label class="formulario__label" for="mensaje">Mensaje</label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
                         </div>
-                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje" required data-tipo = "mensaje" id="inputext2" name="mensaje" data-rodapie></textarea>
                         <button class="formulario__boton" type="submit" data-form-btn>Enviar mensaje</button>
                     </form>
                 </div>

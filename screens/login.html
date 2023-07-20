@@ -24,22 +24,26 @@
     </header>
     <main>
         <div class="inicioSecion">
-            <h4>Inciar Secion</h4>
+            <h4 class="inicioSecion__titulo">Inciar Secion</h4>
             <form action="#" class="inicioSecion__form">
-                <div class="contenedor" data-cont>
-                    <input class="inicioSecion__form-input" type="email" placeholder="Escriba su correo electronico" required data-tipo ="email" id="email" data-inicio>
-                    <span class="form__span" data-span></span>
-                </div>
-                <div class="contenedor" data-cont>
-                    <input class="inicioSecion__form-input" type="password" placeholder="Escriba su contraseña" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" title="Al menos 8 caracteres, máximo 15, debe contener una letra minúscula, una letra mayúscula y no puede contener caracteres especiales." data-tipo="password" required data-inicio>
-                    <span class="form__span" data-span></span>
+                <div class="formulario__container formulario__inicioSecion">
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="nombre">Nombre </label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="password" type="password" required autocomplete="on" data-tipo ="password" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"><span class="barra" ></span>
+                        <label class="formulario__label" for="password">Contraseña </label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
                 </div>
                 <button class="inicioSecion__form-input">Entrar</a></button>
             </form>
         </div>
     </main>
     <footer>
-        <section class="container__footer">
+        <section class="footer">
             <article class="container hableConNosotros">
                 <div class="hableConNosotros__lista">
                     <div class="hableConNosotros__lista-img">
@@ -57,11 +61,19 @@
                 <div class="hableConNosotros__formulario">
                     <h5>Hable con nosotros</h5>
                     <form action="#" data-form>
-                        <div class="formulario__fieldset">
-                            <label class="formulario__fieldset-item" for="name">Nombre</label>
-                            <input class="formulario__fieldset-item" type="text" placeholder="Oscar Juarez" autocomplete="off" required data-tipo = "nombre" maxlength="40" minlength="6" id="inputext" name="name" data-rodapie>
+                        <div class="formulario__container">
+                            <div class="formulario__container-input">
+                                <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                                <label class="formulario__label" for="nombre">Nombre </label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
+                            <div class="formulario__container-input" data-contenedor>
+                                <textarea class="formulario__textarea input" cols="30" rows="4" data-tipo = "mensaje" required pattern="^[\s\S]{0,300}$"></textarea>
+                                <span class="barra"></span>
+                                <label class="formulario__label" for="mensaje">Mensaje</label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
                         </div>
-                        <textarea class="formulario__item" cols="30" rows="4" placeholder="Escribe tu mensaje" required data-tipo = "mensaje" id="inputext2" name="mensaje" data-rodapie></textarea>
                         <button class="formulario__boton" type="submit" data-form-btn>Enviar mensaje</button>
                     </form>
                 </div>

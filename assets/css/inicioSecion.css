@@ -1,11 +1,19 @@
 .inicioSecion{
     padding: 3rem 0 1rem 0;
+    
+}
+
+.inicioSecion__titulo{
     text-align: center;
 }
 
 .inicioSecion__form{
     width: 25vw;
     margin: auto;
+}
+
+.formulario__inicioSecion{
+    height: 175px;
 }
 
 .inicioSecion__form-input{
