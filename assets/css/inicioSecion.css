@@ -1,3 +1,15 @@
+.principal__registro{
+    text-decoration: none;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid #2A7AE4;
+}
+
+.principal__registro:hover{
+    background-color:#2A7AE4;
+    color: #ffffff;
+}
+
 .inicioSecion{
     padding: 3rem 0 1rem 0;
     

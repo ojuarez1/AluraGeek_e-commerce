@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek | Inicio Secion</title>
+    <title>AluraGeek | Registrase</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/inicioSecion.css">
+    <link rel="stylesheet" href="../assets/css/registro.css">
 </head>
 <body>
     <header>
@@ -20,14 +21,19 @@
                     <img class="principal__search-search--search" src="../assets/img/search.svg" alt="">
                 </div>
             </div>
-            <a class="principal__registro" href="registro.html">Registrarse</a>
+            <a class="principal__registro" href="login.html">Iniciar Secion</a>
         </div>
     </header>
     <main>
         <div class="inicioSecion">
-            <h4 class="inicioSecion__titulo">Inciar Secion</h4>
+            <h4 class="inicioSecion__titulo registro__titulo">Registrate Aqui</h4>
             <form action="registroCompletado.html" class="inicioSecion__form">
-                <div class="formulario__container formulario__inicioSecion">
+                <div class="formulario__container formulario__inicioSecion formulario__registro">
+                     <div class="formulario__container-input" data-contenedor>
+                        <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" data-nombre><span class="barra"></span>
+                        <label class="formulario__label" for="nombre">Nombre</label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
                     <div class="formulario__container-input" data-contenedor>
                         <input class="formulario__input input" type="email" required autocomplete="on" data-tipo ="email" data-email><span class="barra"></span>
                         <label class="formulario__label" for="correo">Correo </label>
@@ -39,7 +45,7 @@
                         <span class="span">Este campo no puede estar vacio</span>
                     </div>
                 </div>
-                <button class="inicioSecion__form-input" onclick="return enviarFormulario()">Entrar</button>
+                <button class="inicioSecion__form-input" onclick="">Registrarse ahora</button>
                 <!-- <a class="inicioSecion__link" href="registroCompletado.html"></a> -->
             </form>
         </div>

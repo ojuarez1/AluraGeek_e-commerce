@@ -13,7 +13,6 @@ const validar = (input) =>{
   if (!input.validity.valid){
     input.parentElement.classList.add("contenedorError");
     input.parentElement.querySelector(".span").innerHTML = mostrarErrores(tipoDeInput, input);
-    console.log(input)
   }else{
     input.parentElement.classList.remove("contenedorError");
     input.parentElement.querySelector(".span").innerHTML = "";
