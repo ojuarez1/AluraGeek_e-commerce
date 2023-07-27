@@ -3,7 +3,7 @@ const contra = document.querySelector("[data-contra]")
 
 
 const enviarFormulario = () => {
-    const listaClientes = () => fetch("http://localhost:3000/perfil").then((respuesta) => respuesta.json())
+    const listaClientes = () => fetch("http://localhost:3000/perfil").then((respuesta) => respuesta.json());
     listaClientes().then((data) => {
         data.forEach(perfil => {
             if (perfil.correo == textbox.value && perfil.password == contra.value) {
