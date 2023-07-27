@@ -27,7 +27,7 @@
     <main>
         <div class="inicioSecion">
             <h4 class="inicioSecion__titulo registro__titulo">Registrate Aqui</h4>
-            <form action="registroCompletado.html" class="inicioSecion__form">
+            <form action="registroCompletado.html" class="inicioSecion__form" data-form>
                 <div class="formulario__container formulario__inicioSecion formulario__registro">
                      <div class="formulario__container-input" data-contenedor>
                         <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" data-nombre><span class="barra"></span>
@@ -82,7 +82,7 @@
                                 <span class="span">Este campo no puede estar vacio</span>
                             </div>
                         </div>
-                        <a href="registroCompleto.html"><button class="formulario__boton" type="submit" data-form-btn >Enviar mensaje</button></a>
+                        <button class="formulario__boton" type="submit" data-form-btn >Enviar mensaje</button>
                     </form>
                 </div>
             </article>
@@ -91,7 +91,8 @@
             <p>&copy Oscar Juarez-2023</p>
         </section>
     </footer>
-    <script src="../js/script.js"></script>
-    <script src="../js/inicioSecion.js"></script>
+    <script src="../controllers/script.js"></script>
+    <script src="../controllers/registro.js"></script>
+    <!-- <script type="module" src="../service/clientService.js"></script> -->
 </body>
 </html>
