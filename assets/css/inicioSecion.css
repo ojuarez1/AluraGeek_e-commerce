@@ -43,16 +43,25 @@
     text-decoration: none;
 }
 
-.inicioSecion__form button{
+.boton-producto{
     background-color: #2A7AE4;
     color: #ffffff;
     border: 1px solid #2A7AE4;
 }
 
-.inicioSecion__form button:hover {
+.boton-producto:hover {
     background-color:#ffffff;
     color:#2A7AE4;
 }
+
+.file__container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
 
 .formulario .form__span{
     font-size: 0.75rem;

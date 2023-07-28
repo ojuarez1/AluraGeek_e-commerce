@@ -27,18 +27,19 @@
     <main>
         <div class="inicioSecion">
             <h4>Agregar nuevo producto</h4>
+            <div class="agregar__imagenes">
+                <div class="formulario__imagen" data-container>
+                    <img class="imagen__icono" src="../assets/img/images.svg" alt="">
+                    <h3 data-text>Arrastra y suelta para agregar imagenes</h3>
+                    <input type="file" id="input-file" hidden multiple>
+                </div>
+                <div class="cargar__imagen">
+                    <span>O</span>
+                    <button data-boton>Selecciona tus archivos</button>
+                </div>
+            </div>
             <form action="" class="inicioSecion__form">
-                <div class="formulario__container formulario__agregarProducto">
-                    <div class="formulario__container-input">
-                        <input class="formulario__input input" name="url" type="url" required autocomplete="on" data-tipo ="url" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
-                        <label class="formulario__label" for="url">url</label>
-                        <span class="span">Este campo no puede estar vacio</span>
-                    </div>
-                    <div class="formulario__container-input">
-                        <input class="formulario__input input" name="categoria" type="text" required autocomplete="on" data-tipo ="categoria" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
-                        <label class="formulario__label" for="categoria">Categoria</label>
-                        <span class="span">Este campo no puede estar vacio</span>
-                    </div>
+                <div class="formulario__container formulario__agregarProducto">                    
                     <div class="formulario__container-input">
                         <input class="formulario__input input" name="nombre" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
                         <label class="formulario__label" for="nombre">Nombre del producto</label>
@@ -55,7 +56,7 @@
                         <span class="span">Este campo no puede estar vacio</span>
                     </div>
                 </div>
-                <a class="inicioSecion__link" href=""><button class="inicioSecion__form-input" type="submit">Agregar producto</button></a>
+                <a class="inicioSecion__link" href=""><button class="inicioSecion__form-input boton-producto" type="submit">Agregar producto</button></a>
             </form>
         </div>
     </main>
@@ -100,6 +101,8 @@
             <p>&copy Oscar Juarez-2023</p>
         </section>
     </footer>
-     <script src="../js/script.js"></script>
+     <script src="../controllers/script.js"></script>
+     <script src="../controllers/agregarProducto.js"></script>
+
 </body>
 </html>

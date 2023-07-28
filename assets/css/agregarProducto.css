@@ -2,19 +2,44 @@
     width: 30vw;
 }
 
-.formulario__agregarProducto{
-    height: 375px;
+.agregar__imagenes, .cargar__imagen{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.formulario__imagen{
+    border:5px dashed #dddddd;
+    height: 10rem;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #B2B3B4;
+}
+
+.formulario__imagen.active{
+    background-color: #b8d4fe;
+    color: #000000;
+    border: 5px dashed #618ac9;
+}
+
+.imagen__icono{
+    width: 3rem;
+    padding-bottom:1rem ;
 }
 
 .principal__logo-boton{
     width: 12vw;
 }
 
-.inicioSecion h4{
+.inicioSecion h4, .agregar__imagenes{
     text-align: start;
     width: 30vw;
     margin: 0 auto 1rem;
-    font-size: 1.3rem;
+    
 }
 
 @media(max-width:768px){
