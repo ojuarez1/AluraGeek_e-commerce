@@ -55,20 +55,42 @@ const processFile = (file) => {
         //imagen.src= `../assets/img/${file.name}`
         //agregarProducto(file)
         renderImage(file)
+        const btn = document.querySelector("[data-btn]");
+        btn.addEventListener("click", (evento) => {
+            evento.preventDefault();
+            const name = document.querySelector("[data-nombrePro]").value;
+            const precio = document.querySelector("[data-precioPro]").value;
+            const descripcion = document.querySelector("[data-descripcionPro]").value;
+            agregarProducto(file, name, precio, descripcion)
+        })
+        
     } else {
         alert("Archivo no valido")
     }
 }
 
-const agregarProducto = (file) => {
-    const nombre = file.name
+function uuidv4() {
+    const data = [1e7] + -1e3 + -4e3 + -8e3 + -1e11;
+    return data.replace(/[018]/g, (c) => (
+        crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4))).toString(16)
+    );
+}
+
+
+
+const agregarProducto = (file, name, precio, descripcion) => {
+    const imageUrl = URL.createObjectURL(file);
     return fetch("http://localhost:3000/productos", {
         method:"POST",
         headers: {
             "content-type":"application/json"
         },
         body: JSON.stringify({
-            nombre,
+            name,
+            imageUrl,
+            precio,
+            descripcion,
+            id:uuidv4()
         })
     })
 }
@@ -83,5 +105,4 @@ const renderImage = (formData) => {
     contenido.appendChild(imagen);
     imag.classList.add("hidden")
     dragText.classList.add("hidden");
-    
 }
