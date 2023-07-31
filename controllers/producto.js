@@ -15,8 +15,7 @@ const crearProducto = (name, imageUrl, precio, descripcion) => {
 const showProduct = () => fetch("http://localhost:3000/productos").then((respuesta) => respuesta.json());
 showProduct().then((data) => {
     data.forEach(perfil => {
-        const image = perfil.imageUrl;
-        console.log(crearProducto(perfil.name, image, perfil.precio, perfil.descripcion));
+        console.log(crearProducto(perfil.name, perfil.imageUrl, perfil.precio, perfil.descripcion));
 
     });
 })
