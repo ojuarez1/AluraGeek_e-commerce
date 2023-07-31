@@ -54,6 +54,7 @@ const processFile = (file) => {
         //archivo valido
         //imagen.src= `../assets/img/${file.name}`
         //agregarProducto(file)
+        console.log(file)
         renderImage(file)
         const btn = document.querySelector("[data-btn]");
         btn.addEventListener("click", (evento) => {
@@ -79,7 +80,7 @@ function uuidv4() {
 
 
 const agregarProducto = (file, name, precio, descripcion) => {
-    const imageUrl = URL.createObjectURL(file);
+    const imagenName = file.name
     return fetch("http://localhost:3000/productos", {
         method:"POST",
         headers: {
@@ -87,7 +88,7 @@ const agregarProducto = (file, name, precio, descripcion) => {
         },
         body: JSON.stringify({
             name,
-            imageUrl,
+            imagenName,
             precio,
             descripcion,
             id:uuidv4()
@@ -98,7 +99,6 @@ const agregarProducto = (file, name, precio, descripcion) => {
 const imag = document.querySelector("[data-image]")
 const renderImage = (formData) => {
     const image = URL.createObjectURL(formData);
-    console.log(image)
     const imagen = document.createElement("img")
     imagen.classList.add("dataImage")
     imagen.setAttribute("src", image);
