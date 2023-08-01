@@ -19,6 +19,10 @@ main{
     padding-bottom: 0;
 }
 
+.galeria__articulos-flex .filtro{
+    display:none;
+}
+
 @media(max-width:768px){
     .galeria__articulos-flex>li:nth-child(5),
     .galeria__articulos-flex>li:nth-child(6) {
