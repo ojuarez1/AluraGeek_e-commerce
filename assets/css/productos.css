@@ -1,3 +1,7 @@
+:root{
+    scroll-behavior: smooth;
+}
+
 .galeria__header{
     margin-top: 0;
     padding-top: 2rem;
@@ -19,8 +23,43 @@ main{
     padding-bottom: 0;
 }
 
-.galeria__articulos-flex .filtro{
-    display:none;
+.filtro, .ocultar{
+    display:none ;
+}
+
+.container{
+    position: relative;
+}
+
+#ocultar{
+    position:absolute;
+    top: 2.75rem;
+    left: 13rem;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.08);
+    width: 30vw;
+}
+
+.lista__productos{
+    margin: 1rem;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    line-height:2;
+}
+
+.lista__productos a{
+    text-decoration: none;
+    color:#000;
+    font-size: 0.75rem;
+}
+
+.animate{
+    border: 2px solid #0c08e1;
+    transform: scale(1);
+    text-align: center;
+    font-weight: 600;
 }
 
 @media(max-width:768px){

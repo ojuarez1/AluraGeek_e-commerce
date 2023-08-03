@@ -54,7 +54,6 @@ const processFile = (file) => {
         //archivo valido
         //imagen.src= `../assets/img/${file.name}`
         //agregarProducto(file)
-        console.log(file)
         renderImage(file)
         const btn = document.querySelector("[data-btn]");
         btn.addEventListener("click", (evento) => {

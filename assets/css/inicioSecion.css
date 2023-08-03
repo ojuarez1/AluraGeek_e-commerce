@@ -37,6 +37,8 @@
     margin: 1rem 0;
     box-sizing: border-box;
     box-shadow: 0 3px 5px #00000010;
+    background-color: #2A7AE4;
+    color: #ffffff;
 }
 
 .inicioSecion__link{
