@@ -30,8 +30,7 @@ window.addEventListener("click", e => {
     const buscar = document.querySelectorAll(".buscado");
     const input = document.querySelector("#buscador")
     //console.log(e.target.matches("#buscador"))
-   
-        console.log(e.target)
+
          
         buscar.forEach(producto => {
             const encontrado = document.querySelector(producto.getAttribute("href"));

@@ -21,14 +21,15 @@
                     <img class="principal__search-search--search" src="../assets/img/search.svg" alt="">
                 </div>
             </div>
-            <a href="../index.html" target="_self"><button class="principal__logo-boton" type="submit">Menu administrador</button></a>
+            <a href="productos.html" target="_self"><button class="principal__logo-boton" type="submit">Ir a Productos</button></a>
         </div>
     </header>
     <main>
         <div class="inicioSecion">
-            <h4>Agregar nuevo producto</h4>
+            <h4>Actualizar producto</h4>
             <div class="agregar__imagenes">
                 <div class="formulario__imagen" data-container>
+                    <img src="" alt="" data-mostrar>
                     <img class="imagen__icono" src="../assets/img/images.svg" alt="" data-image>
                     <h3 data-text>Arrastra y suelta para agregar imagenes</h3>
                     <input type="file" id="input-file" hidden multiple>
@@ -38,7 +39,7 @@
                     <button data-boton>Selecciona tus archivos</button>
                 </div>
             </div>
-            <form action="" class="inicioSecion__form">
+            <form action="" class="inicioSecion__form" data-formulario>
                 <div class="formulario__container formulario__agregarProducto">                    
                     <div class="formulario__container-input">
                         <input class="formulario__input input" name="nombre" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$" data-nombrePro><span class="barra" ></span>
@@ -56,7 +57,7 @@
                         <span class="span">Este campo no puede estar vacio</span>
                     </div>
                 </div>
-                <a class="inicioSecion__link" href=""><button class="inicioSecion__form-input boton-producto" type="submit" data-btn>Agregar producto</button></a>
+                <a class="inicioSecion__link" href=""><button class="inicioSecion__form-input boton-producto" type="submit" data-btn>Actualizar ahora</button></a>
             </form>
         </div>
     </main>
@@ -102,7 +103,6 @@
         </section>
     </footer>
      <script src="../controllers/script.js"></script>
-     <script src="../controllers/agregarProducto.js"></script>
-
+     <script src="../controllers/actualizarProducto.js"></script>   
 </body>
 </html>
